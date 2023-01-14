@@ -24,3 +24,4 @@ C:\Users\Oren\source\repos\MvcProjectCamp\DataAccessLayer\obj\Debug\DataAccessLa
 C:\Users\Oren\source\repos\MvcProjectCamp\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.mig_addmessage.resources
 C:\Users\Oren\source\repos\MvcProjectCamp\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.mig_contact_adddate.resources
 C:\Users\Oren\source\repos\MvcProjectCamp\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.mig_addimagefile.resources
+C:\Users\Oren\source\repos\MvcProjectCamp\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.mig_admin_table.resources
