@@ -2,8 +2,10 @@
 @model List<Message>
 @{
     ViewBag.Title = "Inbox";
-    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    Layout = "~/Views/Shared/_WriterLayout.cshtml";
 }
+
+<h2>Inbox</h2>
 
 <!DOCTYPE html>
 <html>
@@ -24,7 +26,7 @@
     <!-- Main content -->
     <section class="content">
         <div class="row">
-            @Html.Action("ContactPartial", "Contact")
+            @Html.Action("MessageListMenu", "WriterPanelMessage")
             <div class="col-md-9">
                 <div class="card card-primary card-outline">
                     <div class="card-header">
@@ -79,8 +81,8 @@
                                                     <label for="check1"></label>
                                                 </div>
                                             </td>
-                                            <td class="mailbox-star"><a href="/Message/GetSendboxMessageDetails/@item.MessageID"><i class="fas fa-star text-warning"></i></a></td>
-                                            <td class="mailbox-name"><a href="/Message/GetInboxMessageDetails/@item.MessageID">@item.SenderMail</a></td>
+                                            <td class="mailbox-star"><a href="/WriterPanelMessage/GetSendboxMessageDetails/@item.MessageID"><i class="fas fa-star text-warning"></i></a></td>
+                                            <td class="mailbox-name"><a href="/WriterPanelMessage/GetInboxMessageDetails/@item.MessageID">@item.SenderMail</a></td>
                                             <td class="mailbox-subject">
                                                 <b>@item.Subject</b> @item.MessageContent.Substring(0,45)...
                                             </td>

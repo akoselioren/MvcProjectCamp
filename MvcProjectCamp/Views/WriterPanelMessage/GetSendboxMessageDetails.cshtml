@@ -1,9 +1,11 @@
 ﻿@model EntityLayer.Concrete.Message
 @{
     ViewBag.Title = "GetSendboxMessageDetails";
-    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    Layout = "~/Views/Shared/_WriterLayout.cshtml";
 }
+
 <h2>Giden Mesaj Detayları</h2>
+
 <!DOCTYPE html>
 <html>
 
@@ -22,7 +24,7 @@
     <section class="content">
         <div class="container-fluid">
             <div class="row">
-                @Html.Action("ContactPartial", "Contact")
+                @Html.Action("MessageListMenu", "WriterPanelMessage")
                 <!-- /.col -->
                 <div class="col-md-9">
                     <div class="card card-primary card-outline">

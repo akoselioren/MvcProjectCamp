@@ -2,10 +2,11 @@
 
 @{
     ViewBag.Title = "NewMessage";
-    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    Layout = "~/Views/Shared/_WriterLayout.cshtml";
 }
 
 <h2>Yeni Mesaj Oluştur</h2>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -40,10 +41,10 @@
     <section class="content">
         <div class="container-fluid">
             <div class="row">
-                @Html.Action("ContactPartial", "Contact")
+                @Html.Action("MessageListMenu", "WriterPanelMessage")
                 <!-- /.col -->
                 <div class="col-md-9">
-                    @using (Html.BeginForm("NewMessage", "Message", FormMethod.Post))
+                    @using (Html.BeginForm("NewMessage", "WriterPanelMessage", FormMethod.Post))
                     {
                         <div class="card card-primary card-outline">
                             <div class="card-header">
@@ -86,8 +87,8 @@
                             <!-- /.card-footer -->
                         </div>
                     }
-                        <!-- /.card -->
-                    </div>
+                    <!-- /.card -->
+                </div>
                 <!-- /.col -->
             </div>
             <!-- /.row -->
@@ -116,4 +117,3 @@
         })</script>
 </body>
 </html>
-
