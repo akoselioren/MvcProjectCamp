@@ -96,3 +96,7 @@ C:\Users\Oren\source\repos\MvcProjectCamp\MvcProjectCamp\bin\System.Threading.Ta
 C:\Users\Oren\source\repos\MvcProjectCamp\MvcProjectCamp\bin\FluentValidation.xml
 C:\Users\Oren\source\repos\MvcProjectCamp\MvcProjectCamp\bin\System.Runtime.CompilerServices.Unsafe.xml
 C:\Users\Oren\source\repos\MvcProjectCamp\MvcProjectCamp\bin\System.Threading.Tasks.Extensions.xml
+C:\Users\Oren\source\repos\MvcProjectCamp\MvcProjectCamp\bin\PagedList.dll
+C:\Users\Oren\source\repos\MvcProjectCamp\MvcProjectCamp\bin\PagedList.Mvc.dll
+C:\Users\Oren\source\repos\MvcProjectCamp\MvcProjectCamp\bin\PagedList.xml
+C:\Users\Oren\source\repos\MvcProjectCamp\MvcProjectCamp\bin\PagedList.Mvc.xml

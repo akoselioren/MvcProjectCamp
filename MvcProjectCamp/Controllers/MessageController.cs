@@ -18,14 +18,14 @@ namespace MvcProjectCamp.Controllers
         MessageManager mm = new MessageManager(new EfMessageDal());
         MessageValidator messageValidator = new MessageValidator();
         [Authorize]
-        public ActionResult Inbox()
+        public ActionResult Inbox(string p)
         {
-            var messageInList=mm.GetListInbox();
+            var messageInList=mm.GetListInbox(p);
             return View(messageInList);
         }
-        public ActionResult Sendbox()
+        public ActionResult Sendbox(string p)
         {
-            var messageSendList = mm.GetListSendBox();
+            var messageSendList = mm.GetListSendBox(p);
             return View(messageSendList);
         }
         public ActionResult GetInboxMessageDetails(int id)

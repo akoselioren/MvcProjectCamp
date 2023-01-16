@@ -9,6 +9,7 @@ using System.Web.Security;
 
 namespace MvcProjectCamp.Controllers
 {
+    [AllowAnonymous]
     public class LoginController : Controller
     {
         // GET: Login
@@ -32,7 +33,33 @@ namespace MvcProjectCamp.Controllers
             {
                 return RedirectToAction("Index");   
             }
+        }
+        [HttpGet]
+        public ActionResult WriterLogin()
+        {
             return View();
+        }
+        [HttpPost]
+        public ActionResult WriterLogin(Writer p)
+        {
+            Context c = new Context();
+            var writeruserinfo = c.Writers.FirstOrDefault(x => x.WriterMail == p.WriterMail && x.WriterPassword == p.WriterPassword);
+            if (writeruserinfo != null)
+            {
+                FormsAuthentication.SetAuthCookie(writeruserinfo.WriterMail, false);
+                Session["WriterMail"] = writeruserinfo.WriterMail;
+                return RedirectToAction("MyContent", "WriterPanelContent");
+            }
+            else
+            {
+                return RedirectToAction("WriterLogin");
+            }
+        }
+        public ActionResult LogOut()
+        {
+            FormsAuthentication.SignOut();
+            Session.Abandon();
+            return RedirectToAction("Headings","Default");
         }
     }
 }

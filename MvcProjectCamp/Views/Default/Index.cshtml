@@ -1,9 +1,6 @@
 ﻿@using EntityLayer.Concrete
 @model List<Content>
-@{
-    ViewBag.Title = "Index";
-    Layout = "~/Views/Shared/_WriterLayout.cshtml";
-}
+<br />
 <!DOCTYPE html>
 <html>
 <body class="hold-transition sidebar-mini">
@@ -20,7 +17,7 @@
                             {
                                 <!-- timeline time label -->
                                 <div class="time-label">
-                                    <span class="bg-success">@(((DateTime) item.ContentDate).ToString("dd-MMM-yyyy"))</span>
+                                    <span class="bg-success">@(((DateTime) item.ContentDate).ToString("dd-MMM-yyyy")) - @item.Writer.WriterName @item.Writer.WriterSurName</span>
                                 </div>
                                 <!-- /.timeline-label -->
                                 <!-- timeline item -->
