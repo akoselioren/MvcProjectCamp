@@ -8,10 +8,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>Mvc Proje Kampı</title>
+
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="~/AdminLTE-3.0.4/plugins/fontawesome-free/css/all.min.css">
     <!-- IonIcons -->
@@ -22,6 +24,7 @@
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
     <script src="~/AdminLTE-3.0.4/plugins/jquery/jquery.min.js"></script>
 </head>
+
 <!--
 BODY TAG OPTIONS:
 =================
@@ -62,13 +65,13 @@ to get the desired effect
                     <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
                         @foreach (var item in Model)
                         {
-                        <li class="nav-item">
-                            <a href="/Default/Headings/@item.HeadingID" class="nav-link">
-                                <p>
-                                    @item.HeadingName 
-                                </p>
-                            </a>
-                        </li>
+                            <li class="nav-item">
+                                <a href="/Default/Headings/@item.HeadingID" class="nav-link">
+                                    <p>
+                                        @item.HeadingName
+                                    </p>
+                                </a>
+                            </li>
                         }
                     </ul>
                 </nav>
@@ -80,7 +83,7 @@ to get the desired effect
         <!-- Content Wrapper. Contains page content -->
         <div class="content-wrapper">
             <!-- Main content -->
-            @Html.Action("Index","Default")
+            @Html.Action("Index", "Default")
             <div class="content">
                 <!-- /.container-fluid -->
             </div>

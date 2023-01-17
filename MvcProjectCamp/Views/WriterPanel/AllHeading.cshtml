@@ -7,9 +7,9 @@
     ViewBag.Title = "AllHeading";
     Layout = "~/Views/Shared/_WriterLayout.cshtml";
 }
-
-<h2>AllHeading</h2>
-
+<br />
+<h2 style="text-align:center">Açılan Tüm Başlıklar</h2>
+<br />
 @{
     string color = "";
 }
@@ -97,7 +97,7 @@
                                 </td>
                                 <td class="project-state">
                                     <span class="@color">@item.Category.CategoryName</span>
-                                </td> 
+                                </td>
                                 <td class="project-actions text-right">
                                     <a class="btn btn-primary btn-sm" href="/Default/Headings/@item.HeadingID">
                                         <i class="fas fa-folder">
@@ -121,8 +121,8 @@
     </section>
 </body>
 </html>
-@Html.PagedListPager((IPagedList)Model, page => Url.Action("AllHeading", new { page }),new PagedListRenderOptions
+@Html.PagedListPager((IPagedList)Model, page => Url.Action("AllHeading", new { page }), new PagedListRenderOptions
 {
-    LiElementClasses=new List<String>
+    LiElementClasses = new List<String>
     {"page-link"}
 })

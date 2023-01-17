@@ -67,5 +67,9 @@ namespace MvcProjectCamp.Controllers
             return RedirectToAction("Headings", "Default");
 
         }
+        public ActionResult SweetAlert()
+        {
+            return View();
+        }
     }
 }
