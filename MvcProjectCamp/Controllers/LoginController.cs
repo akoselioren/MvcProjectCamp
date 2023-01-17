@@ -1,4 +1,6 @@
-﻿using DataAccessLayer.Concrete;
+﻿using BusinessLayer.Concrete;
+using DataAccessLayer.Concrete;
+using DataAccessLayer.EntityFramework;
 using EntityLayer.Concrete;
 using System;
 using System.Collections.Generic;
@@ -12,6 +14,7 @@ namespace MvcProjectCamp.Controllers
     [AllowAnonymous]
     public class LoginController : Controller
     {
+        WriterLoginManager wm = new WriterLoginManager(new EfWriterDal());
         // GET: Login
         [HttpGet]
         public ActionResult Index()
@@ -21,8 +24,8 @@ namespace MvcProjectCamp.Controllers
         [HttpPost]
         public ActionResult Index(Admin p)
         {
-            Context c=new Context();
-            var adminuserinfo=c.Admins.FirstOrDefault(x=>x.AdminUserName==p.AdminUserName && x.AdminPassword==p.AdminPassword);
+            Context c = new Context();
+            var adminuserinfo = c.Admins.FirstOrDefault(x => x.AdminUserName == p.AdminUserName && x.AdminPassword == p.AdminPassword);
             if (adminuserinfo!=null) 
             {
                 FormsAuthentication.SetAuthCookie(adminuserinfo.AdminUserName,false);
@@ -42,8 +45,9 @@ namespace MvcProjectCamp.Controllers
         [HttpPost]
         public ActionResult WriterLogin(Writer p)
         {
-            Context c = new Context();
-            var writeruserinfo = c.Writers.FirstOrDefault(x => x.WriterMail == p.WriterMail && x.WriterPassword == p.WriterPassword);
+            //Context c = new Context();
+            //var writeruserinfo = c.Writers.FirstOrDefault(x => x.WriterMail == p.WriterMail && x.WriterPassword == p.WriterPassword);
+            var writeruserinfo = wm.GetWriter(p.WriterMail, p.WriterPassword);
             if (writeruserinfo != null)
             {
                 FormsAuthentication.SetAuthCookie(writeruserinfo.WriterMail, false);
@@ -57,9 +61,11 @@ namespace MvcProjectCamp.Controllers
         }
         public ActionResult LogOut()
         {
+            
             FormsAuthentication.SignOut();
             Session.Abandon();
-            return RedirectToAction("Headings","Default");
+            return RedirectToAction("Headings", "Default");
+
         }
     }
 }

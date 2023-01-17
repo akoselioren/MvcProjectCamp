@@ -1,5 +1,6 @@
 ﻿using BusinessLayer.Concrete;
 using DataAccessLayer.EntityFramework;
+using EntityLayer.Concrete;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,6 +17,11 @@ namespace MvcProjectCamp.Controllers
         public ActionResult Index()
         {
             return View();
+        }
+        public ActionResult GetAllContent(string p)
+        {
+            var values = cm.GetList(p);
+            return View(values);    
         }
         public ActionResult ContentByHeading(int id)
         {

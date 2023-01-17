@@ -146,6 +146,7 @@
     <Compile Include="Controllers\AboutController.cs" />
     <Compile Include="Controllers\AdminCategoryController.cs" />
     <Compile Include="Controllers\CategoryController.cs" />
+    <Compile Include="Controllers\ChartController.cs" />
     <Compile Include="Controllers\ContactController.cs" />
     <Compile Include="Controllers\ContentController.cs" />
     <Compile Include="Controllers\DefaultController.cs" />
@@ -162,6 +163,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\CategoryClass.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Roles\AdminRoleProvider.cs" />
   </ItemGroup>
@@ -341,6 +343,13 @@
     <Content Include="AdminLTE-3.0.4\images\PEKİN.jpg" />
     <Content Include="AdminLTE-3.0.4\images\ROMA.jpg" />
     <Content Include="AdminLTE-3.0.4\images\sanfrancisco.jpg" />
+    <Content Include="AdminLTE-3.0.4\showcase\images\screenshot1.png" />
+    <Content Include="AdminLTE-3.0.4\showcase\images\screenshot2.png" />
+    <Content Include="AdminLTE-3.0.4\showcase\images\screenshot3.png" />
+    <Content Include="AdminLTE-3.0.4\showcase\images\screenshot4.png" />
+    <Content Include="AdminLTE-3.0.4\showcase\images\screenshot5.png" />
+    <Content Include="AdminLTE-3.0.4\showcase\images\screenshot6.png" />
+    <Content Include="AdminLTE-3.0.4\showcase\images\screenshot7.png" />
     <Content Include="AdminLTE-3.0.4\images\SİNGAPUR.jpg" />
     <Content Include="AdminLTE-3.0.4\index.html" />
     <Content Include="AdminLTE-3.0.4\index2.html" />
@@ -2034,6 +2043,48 @@
     <Content Include="AdminLTE-3.0.4\plugins\toastr\toastr.css" />
     <Content Include="AdminLTE-3.0.4\plugins\toastr\toastr.min.css" />
     <Content Include="AdminLTE-3.0.4\plugins\toastr\toastr.min.js" />
+    <Content Include="AdminLTE-3.0.4\showcase\css\aos-animation.css" />
+    <Content Include="AdminLTE-3.0.4\showcase\css\aos.css" />
+    <Content Include="AdminLTE-3.0.4\showcase\css\bootstrap.css" />
+    <Content Include="AdminLTE-3.0.4\showcase\css\fontawesome-all.css" />
+    <Content Include="AdminLTE-3.0.4\showcase\css\roadmap.css" />
+    <Content Include="AdminLTE-3.0.4\showcase\css\simpleLightbox.css" />
+    <Content Include="AdminLTE-3.0.4\showcase\css\snow.css" />
+    <Content Include="AdminLTE-3.0.4\showcase\css\style.css" />
+    <Content Include="AdminLTE-3.0.4\showcase\images\banner.jpg" />
+    <Content Include="AdminLTE-3.0.4\showcase\images\close.png" />
+    <Content Include="AdminLTE-3.0.4\showcase\images\contact.jpg" />
+    <Content Include="AdminLTE-3.0.4\showcase\images\exp.jpg" />
+    <Content Include="AdminLTE-3.0.4\showcase\images\g1.jpg" />
+    <Content Include="AdminLTE-3.0.4\showcase\images\g2.jpg" />
+    <Content Include="AdminLTE-3.0.4\showcase\images\g3.jpg" />
+    <Content Include="AdminLTE-3.0.4\showcase\images\g4.jpg" />
+    <Content Include="AdminLTE-3.0.4\showcase\images\g5.jpg" />
+    <Content Include="AdminLTE-3.0.4\showcase\images\g6.jpg" />
+    <Content Include="AdminLTE-3.0.4\showcase\images\g7.jpg" />
+    <Content Include="AdminLTE-3.0.4\showcase\images\g8.jpg" />
+    <Content Include="AdminLTE-3.0.4\showcase\images\g9.jpg" />
+    <Content Include="AdminLTE-3.0.4\showcase\images\loader.gif" />
+    <Content Include="AdminLTE-3.0.4\showcase\images\move_up.png" />
+    <Content Include="AdminLTE-3.0.4\showcase\images\next.png" />
+    <Content Include="AdminLTE-3.0.4\showcase\images\prev.png" />
+    <Content Include="AdminLTE-3.0.4\showcase\images\serve.jpg" />
+    <Content Include="AdminLTE-3.0.4\showcase\images\stats.jpg" />
+    <Content Include="AdminLTE-3.0.4\showcase\images\testimonials.jpg" />
+    <Content Include="AdminLTE-3.0.4\showcase\index.html" />
+    <Content Include="AdminLTE-3.0.4\showcase\js\aos.js" />
+    <Content Include="AdminLTE-3.0.4\showcase\js\bootstrap.js" />
+    <Content Include="AdminLTE-3.0.4\showcase\js\easing.js" />
+    <Content Include="AdminLTE-3.0.4\showcase\js\jquery-2.2.3.min.js" />
+    <Content Include="AdminLTE-3.0.4\showcase\js\jquery.countup.js" />
+    <Content Include="AdminLTE-3.0.4\showcase\js\jquery.roadmap.js" />
+    <Content Include="AdminLTE-3.0.4\showcase\js\jquery.waypoints.min.js" />
+    <Content Include="AdminLTE-3.0.4\showcase\js\move-top.js" />
+    <Content Include="AdminLTE-3.0.4\showcase\js\simpleLightbox.js" />
+    <Content Include="AdminLTE-3.0.4\showcase\w3layouts-license.txt" />
+    <Content Include="AdminLTE-3.0.4\showcase\webfonts\fa-brands-400.svg" />
+    <Content Include="AdminLTE-3.0.4\showcase\webfonts\fa-regular-400.svg" />
+    <Content Include="AdminLTE-3.0.4\showcase\webfonts\fa-solid-900.svg" />
     <Content Include="AdminLTE-3.0.4\starter.html" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
@@ -2513,6 +2564,18 @@
     <Content Include="AdminLTE-3.0.4\loginform\scss\bootstrap\_utilities.scss" />
     <Content Include="AdminLTE-3.0.4\loginform\scss\bootstrap\_variables.scss" />
     <Content Include="AdminLTE-3.0.4\loginform\scss\style.scss" />
+    <Content Include="AdminLTE-3.0.4\showcase\webfonts\fa-brands-400.eot" />
+    <Content Include="AdminLTE-3.0.4\showcase\webfonts\fa-brands-400.ttf" />
+    <Content Include="AdminLTE-3.0.4\showcase\webfonts\fa-brands-400.woff" />
+    <Content Include="AdminLTE-3.0.4\showcase\webfonts\fa-brands-400.woff2" />
+    <Content Include="AdminLTE-3.0.4\showcase\webfonts\fa-regular-400.eot" />
+    <Content Include="AdminLTE-3.0.4\showcase\webfonts\fa-regular-400.ttf" />
+    <Content Include="AdminLTE-3.0.4\showcase\webfonts\fa-regular-400.woff" />
+    <Content Include="AdminLTE-3.0.4\showcase\webfonts\fa-regular-400.woff2" />
+    <Content Include="AdminLTE-3.0.4\showcase\webfonts\fa-solid-900.eot" />
+    <Content Include="AdminLTE-3.0.4\showcase\webfonts\fa-solid-900.ttf" />
+    <Content Include="AdminLTE-3.0.4\showcase\webfonts\fa-solid-900.woff" />
+    <Content Include="AdminLTE-3.0.4\showcase\webfonts\fa-solid-900.woff2" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -2582,11 +2645,12 @@
     <Content Include="Views\Default\Index.cshtml" />
     <Content Include="Views\WriterPanel\AllHeading.cshtml" />
     <Content Include="Views\WriterPanelContent\AddContent.cshtml" />
-    <Content Include="Views\WriterPanelContent\ToDoList.cshtml" />
+    <Content Include="Views\Home\HomePage.cshtml" />
+    <Content Include="Views\Content\GetAllContent.cshtml" />
+    <Content Include="Views\Chart\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
